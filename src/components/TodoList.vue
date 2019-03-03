@@ -4,14 +4,16 @@
             <article class="message is-dark">
                 <div class="message-body">
                     <div class="columns">
-                        <div class="column is-three-quarters" style="text-align: left">
+                        <div class="column is-four-fifths align-left">
                             {{todo.task}}
                         </div>
-                        <div class="column">
-                            <span class="tag is-success" v-if="todo.completed">Done</span>
+                        <div class="column align-right">
+                            <transition name="fade">
+                                <span class="tag is-success" v-if="todo.completed">Done</span>
+                            </transition>
                         </div>
-                        <div class="column" style="text-align: right">
-                            <button @click="deleteTodo(todo.id)" class="delete"></button>
+                        <div class="column align-right">
+                            <button @click="deleteTodo(todo.id)" class="delete align-right"></button>
                         </div>
                     </div>
                 </div>
@@ -40,5 +42,20 @@ export default {
     .card {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .align-left {
+        text-align: left; 
+    }
+
+    .align-right {
+        text-align: right; 
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
     }
 </style>
