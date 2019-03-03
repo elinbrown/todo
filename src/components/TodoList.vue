@@ -1,5 +1,6 @@
 <template>
     <div>
+        <transition-group name="fade">
         <div class="card" v-for="todo in todos" :key="todo.id" @click="toggleTodo(todo.id)">
             <article class="message is-dark">
                 <div class="message-body">
@@ -8,7 +9,7 @@
                             {{todo.task}}
                         </div>
                         <div class="column align-right">
-                            <transition name="fade">
+                            <transition name="bounce">
                                 <span class="tag is-success" v-if="todo.completed">Done</span>
                             </transition>
                         </div>
@@ -19,9 +20,12 @@
                 </div>
             </article>
         </div>
+        </transition-group>
     </div>
 </template>
 <script>
+require('vue2-animate/dist/vue2-animate.min.css')
+
 export default {
     computed: {
         todos() {
@@ -58,4 +62,5 @@ export default {
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
         opacity: 0;
     }
+
 </style>
