@@ -2,7 +2,7 @@
     <div>
         <transition-group name="fade">
         <div class="card card-hover" v-for="todo in todos" :key="todo.id" @click="toggleTodo(todo.id)">
-            <article class="message is-dark">
+            <article class="message is-dark" v-bind:class="{ 'is-success': todo.completed }">
                 <div class="message-body">
                     <div class="columns">
                         <div class="column is-four-fifths align-left">
