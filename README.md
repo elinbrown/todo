@@ -1,5 +1,14 @@
-# todo
-A simple todo app with Vue.js and Vuex. Uses Bulma for CSS. I wanted to learn Vuex for state management and this was my first simple attempt.
+# TODO
+A simple todo app built with Vue.js (and Vuex). 
+
+## About
+I wanted to learn Vuex for state management and this was my simple attempt. 
+
+## This project also uses 
+* [Bulma](https://bulma.io/)
+* [Vue2-animate](https://github.com/asika32764/vue2-animate)
+* [Font awesome](https://fontawesome.com/)
+
 
 ## Project setup
 ```
