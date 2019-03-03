@@ -1,4 +1,5 @@
-# hello-world
+# todo
+A simple todo app with Vue.js and Vuex. Uses Bulma for CSS. I wanted to learn Vuex for state management and this was my first simple attempt.
 
 ## Project setup
 ```
@@ -14,16 +15,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
