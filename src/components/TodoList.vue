@@ -1,7 +1,7 @@
 <template>
     <div>
         <transition-group name="fade">
-        <div class="card" v-for="todo in todos" :key="todo.id" @click="toggleTodo(todo.id)">
+        <div class="card card-hover" v-for="todo in todos" :key="todo.id" @click="toggleTodo(todo.id)">
             <article class="message is-dark">
                 <div class="message-body">
                     <div class="columns">
@@ -61,6 +61,11 @@ export default {
     }
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
         opacity: 0;
+    }
+
+    .card-hover
+    {
+        cursor: pointer;
     }
 
 </style>

@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <!-- container -->
-    <div class="container">
-      <!-- nav -->
-      <nav class="level">
-        <p class="level-item has-text-centered">
-          <span class="app-title">TODO</span>
-        </p>
-      </nav>
-      <!-- end nav -->
+    <div class="wrapper">
+      <!-- container -->
+      <div class="container">
+        <!-- nav -->
+        <nav class="level">
+          <p class="level-item has-text-centered">
+            <span class="app-title">TODO</span>
+          </p>
+        </nav>
+        <!-- end nav -->
 
-      <!-- components --> 
-      <add-todo></add-todo>
-      <todo-list></todo-list>
-      <!-- end components --> 
+        <!-- components --> 
+        <div class="component-wrapper">
+          <add-todo></add-todo>
+          <todo-list></todo-list>
+        </div>
+        <!-- end components --> 
 
-      <!-- footer -->
-      <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Todo</strong> by Elin Brown.<br>
-          <a href="https://github.com/elinbrown/todo" target="_blank">Github repo</a>
-        </p>
+        <!-- footer -->
+        <footer>
+        <div class="has-text-centered">
+          <p>
+            <strong>Todo</strong> by Elin Brown.<br>
+            <a href="https://github.com/elinbrown/todo" target="_blank"><font-awesome-icon :icon="['fab', 'github']" class="fa-icon"/></a>
+          </p>
+        </div>
+        </footer>
+      <!-- end footer -->
       </div>
-    </footer>
-    <!-- end footer -->
+      <!-- end container -->
     </div>
-    <!-- end container -->
   </div>
 </template>
 
@@ -47,20 +51,17 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
-body, html {
+body, html 
+{
   font-family: 'Open Sans', sans-serif; 
 }
-#app {
+
+#app 
+{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-.container
-{
-  margin-top: 20px;
-  max-width: 50%;
 }
 
 .app-title
@@ -69,12 +70,26 @@ body, html {
   font-size: 2em; 
 }
 
-.footer {
+footer 
+{
   background-color: #FFF;
+  margin-top: 40px;
 }
 
-.navbar
+.wrapper 
 {
-  background-color: #f1f1f1;
+   margin-top: 40px;
+}
+
+.component-wrapper
+{
+  max-width:60%;
+  margin: 0 auto;
+}
+
+.fa-icon 
+{
+  font-size: 2em;
+  margin-top: 10px;
 }
 </style>
