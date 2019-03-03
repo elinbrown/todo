@@ -7,7 +7,7 @@ export const store = new Vuex.Store({
     state: {
       todos: [
           {
-              id: 1,
+              id: 0,
               task: "Learn vuex",
               completed: false
           }

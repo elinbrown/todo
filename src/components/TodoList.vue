@@ -1,8 +1,8 @@
 <template>
     <div>
         <transition-group name="fade">
-        <div class="card card-hover" v-for="todo in todos" :key="todo.id" @click="toggleTodo(todo.id)">
-            <article class="message is-dark" v-bind:class="{ 'is-success': todo.completed }">
+        <div class="card" v-for="todo in todos" :key="todo.id">
+            <article class="message is-dark card-hover" v-bind:class="{ 'is-success': todo.completed }" @click="toggleTodo(todo.id)">
                 <div class="message-body">
                     <div class="columns">
                         <div class="column is-four-fifths align-left">
